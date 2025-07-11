@@ -1,0 +1,35 @@
+file "${TOP}/db/lakeshore336.template"
+{
+pattern {   P,      PORT,   ADDR, TEMPSCAN, SCAN}
+	    {"COMP:A", "L0",    "0",   "1",    "5" }
+}
+
+file "${TOP}/db/lakeshore336output.template"
+{
+pattern {   P,       OUT,   PORT,   ADDR, TEMPSCAN, SCAN}
+	    {"COMP:A",   "1",   "L0",    "0",   "1",    "5" }
+		{"COMP:A",   "2",   "L0",    "0",   "1",    "5" }
+}
+
+file "${TOP}/db/lakeshore336loop.template"
+{
+pattern {      P,         OUT,     CMD,      PORT,   ADDR, TEMPSCAN, SCAN}
+        {"EMA:B:LS336",   "1",   "getHTR",   "L0",    "0",   "1",    "5" }
+        {"EMA:B:LS336",   "2",   "getHTR",   "L0",    "0",   "1",    "5" }
+}
+
+
+file "${TOP}/db/lakeshore_input.template"
+{
+pattern {   P,       INPUT,   PORT,   ADDR, TEMPSCAN, SCAN}
+	    {"COMP:A",    "A",    "L0",    "0",   "1",    "5" }
+		{"COMP:A",    "B",    "L0",    "0",   "1",    "5" }
+		{"COMP:A",    "C",    "L0",    "0",   "1",    "5" }
+		{"COMP:A",    "D",    "L0",    "0",   "1",    "5" }
+}
+
+#file "${TOP}/db/save_restoreStatus.db"
+#{
+#pattern {    P    }
+#        {"COMP:A:"}
+#}

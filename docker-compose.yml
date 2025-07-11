@@ -1,0 +1,14 @@
+services:
+  ioc:
+    image: ghcr.io/cnpem/lakeshore-epics-ioc
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+      target: static-link
+      labels:
+        org.opencontainers.image.source: https://github.com/cnpem/lakeshore-epics-ioc
+      args:
+        REPONAME: LakeShore
+        RUNDIR: /opt/LakeShore/iocBoot/iocLakeShore
+        BUILD_STAGE_VERSION: latest
+        
