@@ -21,6 +21,7 @@ LakeShore_DBD += calc.dbd
 LakeShore_DBD += stream-base.dbd
 LakeShore_DBD += asyn.dbd
 LakeShore_DBD += busySupport.dbd
+LakeShore_DBD += drvAsynSerialPort.dbd
 LakeShore_DBD += drvAsynIPPort.dbd
 LakeShore_DBD += asSupport.dbd
 
